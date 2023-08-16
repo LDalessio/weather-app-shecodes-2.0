@@ -1,0 +1,90 @@
+.skyImage {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.weatherApp {
+  max-width: 650px;
+  border: 2px solid #000000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.current:first-letter {
+  text-transform: capitalize;
+}
+.enterLocation {
+  margin: 15px;
+  color: rgb(62, 60, 60);
+}
+
+.currentDayTime {
+  margin: 40px 0 0 0;
+  font-size: 30px;
+  color: rgb(62, 60, 60);
+}
+
+.current {
+  margin: 0 10px 5px 0;
+  text-align: right;
+  color: rgb(62, 60, 60);
+}
+
+.enteredCityState {
+  margin-left: 50px;
+  text-align: left;
+  margin-top: 40px;
+  font-size: 20px;
+}
+.currentTemp {
+  margin-left: 50px;
+  text-align: left;
+  font-size: 38px;
+}
+
+.units {
+  font-size: 18px;
+}
+
+.extraDetails {
+  text-align: left;
+  border-right: solid gray 1px;
+}
+
+.currentWind {
+  color: rgb(62, 60, 60);
+  margin-top: 40px;
+}
+.currentHumidity {
+  color: rgb(62, 60, 60);
+}
+.weekDay {
+  color: rgb(62, 60, 60);
+  margin-bottom: 10px;
+}
+.sunIcon {
+  font-size: 40px;
+  margin: 5px;
+  color: #fffad7;
+}
+
+.currentLocationTemp {
+  border-right: solid gray 1px;
+}
+
+.currentLocationTemp .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.currentLocationTemp .active:hover {
+  text-decoration: none;
+}

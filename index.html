@@ -10,11 +10,134 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <p>Weather</p>
+    <div class="container weatherApp">
+      <div class="container text-left">
+        <div class="row">
+          <div class="col-8">
+            <div class="currentDayTime" id="date"></div>
+          </div>
+          <div class="col-4">
+            <div class="enteredCityState" id="city">CITY</div>
+          </div>
+        </div>
+      </div>
+      <form class="enterLocation" id="enter-location">
+        <div class="container text-left">
+          <div class="row">
+            <div class="col-8">
+              <input type="text" placeholder="Enter a city" id="city-input" />
+            </div>
+            <div class="col-2"><input type="submit" value="Search" /></div>
+            <div class="col-2">
+              <input type="submit" value="Current" id="current-button" />
+            </div>
+          </div>
+        </div>
+      </form>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/649/original/Image.png?1692151279"
+        alt="sky"
+        class="skyImage"
+      />
+      <div class="currentLocationTemp">
+        <div class="row">
+          <div class="col-2">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+              alt="Clear"
+              id="icon"
+            />
+          </div>
+          <div class="col-10">
+            <div class="row">
+              <div class="col-4">
+                <div class="currentTemp" id="current-temp">
+                  <div id="temperature-value"></div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="units">
+                  <a href="#" id="fahrenheit-link" class="active">°F</a> |
+                  <a href="#" id="celsius-link">°C</a>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="current" id="description">Description</div>
+              </div>
+              <div class="col-2">
+                <div class="currentWind">Wind: <span id="wind"></span> mph</div>
+              </div>
+              <div class="col-2">
+                <div class="currentHumidity">
+                  Humidity: <span id="humidity"></span>%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col weekDay">
+            Tue
+            <br />
+            <i class="fa-regular fa-sun sunIcon"></i>
+            <br />
+            102°
+          </div>
+          <div class="col weekDay">
+            Wed
+            <br />
+            <i class="fa-regular fa-sun sunIcon"></i>
+            <br />
+            104°
+          </div>
+          <div class="col weekDay">
+            Thu
+            <br />
+            <i class="fa-regular fa-sun sunIcon"></i>
+            <br />
+            104°
+          </div>
+          <div class="col weekDay">
+            Fri
+            <br />
+            <i class="fa-regular fa-sun sunIcon"></i>
+            <br />
+            102°
+          </div>
+          <div class="col weekDay">
+            Sat
+            <br />
+            <i class="fa-regular fa-sun sunIcon"></i>
+            <br />
+            104°
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container text-center">
+        <div>
+          <a
+            href="https://github.com/LDalessio/SheCodes_Weather_App"
+            target="_blank"
+            >Open-source code</a
+          >, by Lauren D'Alessio
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
