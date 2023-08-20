@@ -1,85 +1,106 @@
-.skyImage {
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-.weatherApp {
-  max-width: 650px;
-  border: 2px solid #000000;
-}
-
+/* General Styles */
 body {
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    109.6deg,
+    rgb(204, 228, 247) 11.2%,
+    rgb(237, 246, 250) 100.2%
+  );
 }
 
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
-.current:first-letter {
-  text-transform: capitalize;
+.footer {
+  margin-bottom: 16px;
 }
+
+/* Layout and Containers */
+.weatherApp {
+  max-width: 650px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  margin-top: 70px;
+  background-color: white;
+}
+
 .enterLocation {
   margin: 15px;
+  padding: 12px;
   color: rgb(62, 60, 60);
 }
 
+/* Typography */
+#description:first-letter {
+  text-transform: capitalize;
+}
 .currentDayTime {
-  margin: 40px 0 0 0;
   font-size: 30px;
   color: rgb(62, 60, 60);
+  padding-left: 24px;
+  margin-top: 20px;
 }
 
+.enteredCityState {
+  font-size: 30px;
+  color: rgb(62, 60, 60);
+  padding-left: 24px;
+}
+
+.units {
+  position: relative;
+  font-size: 18px;
+  top: -34px;
+}
+
+.weekDay {
+  color: rgb(62, 60, 60);
+  margin-bottom: 10px;
+}
+
+/* Temperature and Weather Details */
 .current {
   margin: 0 10px 5px 0;
   text-align: right;
   color: rgb(62, 60, 60);
 }
 
-.enteredCityState {
-  margin-left: 50px;
-  text-align: left;
-  margin-top: 40px;
-  font-size: 20px;
-}
 .currentTemp {
-  margin-left: 50px;
   text-align: left;
-  font-size: 38px;
+  font-size: 64px;
 }
-
-.units {
-  font-size: 18px;
+.overview {
+  padding-left: 24px;
 }
-
-.extraDetails {
-  text-align: left;
-  border-right: solid gray 1px;
-}
-
-.currentWind {
-  color: rgb(62, 60, 60);
-  margin-top: 40px;
-}
+.currentWind,
 .currentHumidity {
   color: rgb(62, 60, 60);
 }
-.weekDay {
-  color: rgb(62, 60, 60);
-  margin-bottom: 10px;
+
+/* Icons and Images */
+#icon {
+  position: relative;
+  top: -20px;
 }
+
+.skyImage,
+.sunIcon {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
 .sunIcon {
   font-size: 40px;
   margin: 5px;
   color: #fffad7;
 }
 
-.currentLocationTemp {
-  border-right: solid gray 1px;
-}
-
+/* Temperature Unit Links */
 .currentLocationTemp .active {
   color: rgb(33, 33, 33);
   cursor: default;
@@ -87,4 +108,14 @@ a:hover {
 
 .currentLocationTemp .active:hover {
   text-decoration: none;
+}
+
+/* Lists */
+ul {
+  margin-left: 0px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
