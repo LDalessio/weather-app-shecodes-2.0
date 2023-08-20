@@ -64,10 +64,12 @@
         <ul>
           <li id="description"></li>
           <li class="currentWind">
-            Wind: <span id="wind"></span> mph
+            <span class="label">Wind:</span>
+            <span id="wind"></span><span class="unit">mph</span>
             <span class="currentHumidity">
-              Humidity: <span id="humidity"></span>%</span
-            >
+              <span class="label">| Humidity:</span>
+              <span id="humidity"></span><span class="unit">%</span>
+            </span>
           </li>
         </ul>
       </div>
@@ -98,46 +100,49 @@
             <br />
             <i class="fa-regular fa-sun sunIcon"></i>
             <br />
-            102°
+            <span class="forecast-temp">102°</span>
           </div>
           <div class="col weekDay">
             Wed
             <br />
             <i class="fa-regular fa-sun sunIcon"></i>
             <br />
-            104°
+            <span class="forecast-temp">104°</span>
           </div>
           <div class="col weekDay">
             Thu
             <br />
             <i class="fa-regular fa-sun sunIcon"></i>
             <br />
-            104°
+            <span class="forecast-temp">104°</span>
           </div>
           <div class="col weekDay">
             Fri
             <br />
             <i class="fa-regular fa-sun sunIcon"></i>
             <br />
-            102°
+            <span class="forecast-temp">102°</span>
           </div>
           <div class="col weekDay">
             Sat
             <br />
             <i class="fa-regular fa-sun sunIcon"></i>
             <br />
-            104°
+            <span class="forecast-temp">104°</span>
           </div>
         </div>
       </div>
+
       <hr />
       <div class="container text-center">
         <div class="footer">
           <a
             href="https://github.com/LDalessio/SheCodes_Weather_App"
             target="_blank"
-            >Open-source code</a
-          >, by Lauren D'Alessio
+          >
+            <span class="footer-link">Open-source code</span>
+          </a>
+          by Lauren D'Alessio
         </div>
       </div>
     </div>

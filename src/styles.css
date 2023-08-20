@@ -18,6 +18,9 @@ a:hover {
 .footer {
   margin-bottom: 16px;
 }
+.footer-link {
+  color: #4997d7;
+}
 
 /* Layout and Containers */
 .weatherApp {
@@ -26,6 +29,7 @@ a:hover {
   border-radius: 10px;
   margin-top: 70px;
   background-color: white;
+  box-shadow: 5px 30px 50px rgba(65, 50, 100, 0.08);
 }
 
 .enterLocation {
@@ -41,14 +45,16 @@ a:hover {
 .currentDayTime {
   font-size: 30px;
   color: rgb(62, 60, 60);
-  padding-left: 24px;
+  padding-left: 15px;
   margin-top: 20px;
+  font-weight: 700;
 }
 
 .enteredCityState {
   font-size: 30px;
   color: rgb(62, 60, 60);
   padding-left: 24px;
+  font-weight: 700;
 }
 
 .units {
@@ -60,6 +66,26 @@ a:hover {
 .weekDay {
   color: rgb(62, 60, 60);
   margin-bottom: 10px;
+}
+
+.btn-outline-primary {
+  border-color: #4997d7;
+}
+.btn {
+  color: #4997d7;
+}
+.btn:hover {
+  background-color: #4997d7;
+}
+
+.currentWind #wind,
+.currentHumidity #humidity {
+  color: #ff69b4;
+}
+
+.currentWind .unit,
+.currentHumidity .unit {
+  color: #ff69b4;
 }
 
 /* Temperature and Weather Details */
@@ -96,18 +122,26 @@ a:hover {
 
 .sunIcon {
   font-size: 40px;
-  margin: 5px;
-  color: #fffad7;
+  margin: 20px;
+  color: black;
+}
+.forecast-temp {
+  color: #ff69b4;
 }
 
 /* Temperature Unit Links */
 .currentLocationTemp .active {
-  color: rgb(33, 33, 33);
+  color: rgb(33, 33, 33); /* Default color for active link */
   cursor: default;
 }
 
-.currentLocationTemp .active:hover {
+.currentLocationTemp a:not(.active) {
+  color: #ff69b4;
+}
+
+.currentLocationTemp a:not(.active):hover {
   text-decoration: none;
+  color: #ff69b4;
 }
 
 /* Lists */
