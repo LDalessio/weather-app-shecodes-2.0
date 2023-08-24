@@ -62,6 +62,7 @@ a:hover {
   position: relative;
   font-size: 18px;
   top: -34px;
+  left: -10px;
 }
 
 .weather-forecast {
