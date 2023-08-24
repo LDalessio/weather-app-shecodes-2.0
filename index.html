@@ -24,14 +24,14 @@
     <div class="container weatherApp">
       <div class="container text-left">
         <div class="row">
-          <div class="col-8">
+          <div class="col-10">
             <div class="currentDayTime" id="date"></div>
           </div>
         </div>
       </div>
 
       <form class="enterLocation mb-3" id="enter-location">
-        <div class="row">
+        <div class="row align-items-end">
           <div class="col-md-8 col-12">
             <input
               type="text"
@@ -45,15 +45,17 @@
             <input
               type="submit"
               value="Search"
-              class="btn btn-outline-primary btn-block"
+              class="btn btn-outline-primary btn-block btn-md"
+              style="margin-top: 10px"
             />
           </div>
-          <div class="col-md-2 col-6 mt-2 mt-md-0">
+          <div class="col-md-2 col-6">
             <input
               type="submit"
               value="Current"
               id="current-button"
-              class="btn btn-outline-primary btn-block"
+              class="btn btn-outline-primary btn-block btn-md"
+              style="margin-top: 10px"
             />
           </div>
         </div>
@@ -61,7 +63,7 @@
 
       <hr />
       <div class="row">
-        <div class="col-6">
+        <div class="col-5">
           <div class="enteredCityState" id="city"></div>
           <div class="overview">
             <h1 id="city"></h1>
@@ -78,7 +80,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-7">
           <div class="currentLocationTemp">
             <img
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
