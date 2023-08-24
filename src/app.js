@@ -28,7 +28,7 @@ function formatDate(date) {
 
 // Display Forecast
 //----------------------------------------------
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Mon", "Tue", "Wed"];
@@ -58,6 +58,12 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(query) {
+  let apiKey = "73453af9f4a0a21aof85fet5591b1ffd";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${query}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // Display Current Date and Time
 //----------------------------------------------
 let dateElement = document.querySelector("#date");
@@ -83,6 +89,7 @@ function showCurrentCityTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  getForecast(response.data.city);
 }
 
 function getWeatherByCity(city) {
@@ -164,4 +171,3 @@ celsiusLink.addEventListener("click", handleCelsiusLinkClick);
 // Initialize with Default City
 //----------------------------------------------
 getWeatherByCity("Phoenix");
-displayForecast();
