@@ -59,37 +59,40 @@
         </div>
       </form>
       <hr />
+      <div class="row">
+        <div class="col-6">
+          <div class="enteredCityState" id="city"></div>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li id="description"></li>
+              <li class="currentWind">
+                <span class="label">Wind:</span>
+                <span id="wind"></span><span class="unit">mph</span>
+                <span class="currentHumidity">
+                  <span class="label">| Humidity:</span>
+                  <span id="humidity"></span><span class="unit">%</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="currentLocationTemp">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+              alt="Clear"
+              id="icon"
+              class="float-left"
+            />
 
-      <div class="enteredCityState" id="city"></div>
-      <div class="overview">
-        <h1 id="city"></h1>
-        <ul>
-          <li id="description"></li>
-          <li class="currentWind">
-            <span class="label">Wind:</span>
-            <span id="wind"></span><span class="unit">mph</span>
-            <span class="currentHumidity">
-              <span class="label">| Humidity:</span>
-              <span id="humidity"></span><span class="unit">%</span>
+            <span class="currentTemp float-left" id="current-temp">
+              <span id="temperature-value"> </span>
+              <span class="units">°F</span>
             </span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-
-      <div class="currentLocationTemp">
-        <img
-          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
-          alt="Clear"
-          id="icon"
-          class="float-left"
-        />
-
-        <span class="currentTemp float-left" id="current-temp">
-          <span id="temperature-value"> </span>
-          <span class="units">°F</span>
-        </span>
-      </div>
-
       <hr />
 
       <div class="weather-forecast" id="forecast"></div>
