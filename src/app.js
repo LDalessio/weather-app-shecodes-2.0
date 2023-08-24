@@ -2,6 +2,15 @@
 //----------------------------------------------
 function formatDate(date) {
   let hours = date.getHours();
+  let amOrPm = hours >= 12 ? "PM" : "AM";
+
+  // Convert to 12-hour format
+  if (hours > 12) {
+    hours -= 12;
+  } else if (hours === 0) {
+    hours = 12;
+  }
+
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -23,7 +32,7 @@ function formatDate(date) {
   ];
   let day = days[dayIndex];
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes} ${amOrPm}`;
 }
 
 function formatDay(timestamp) {
